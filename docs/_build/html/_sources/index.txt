@@ -1,0 +1,17 @@
+Omnitutor High Level Design
+===========================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   schema
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
+
