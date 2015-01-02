@@ -1,0 +1,5 @@
+Set up nginx virtual host
+
+Install virtual environment
+Set up virtual environment
+Install libraries in requirements.txt
