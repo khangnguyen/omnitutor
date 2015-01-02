@@ -1,5 +1,24 @@
-Set up nginx virtual host
+B0;136;0c# Set up nginx virtual host
 
-Install virtual environment
-Set up virtual environment
-Install libraries in requirements.txt
+# Install virtual environment
+# Set up virtual environment
+# Install libraries in requirements.txt
+
+# Install golang at http://golang.org/doc/install#tarball
+wget https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz
+tar -C /usr/local go1.4.linux-amd64.tar.gz
+echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
+
+# Set up GOPATH
+mkdir ~/gocode
+export GOPATH=~/gocode
+export "GOPATH=$GOPATH" >> ~/.bash_profile
+
+# Install revel
+go get github.com/revel/revel
+go get github.com/revel/cmd/revel
+
+# Link project directories into GOPATH
+cd $GOPATH
+cd src
+ln -s /var/www/hosts/dev.omnitutor.me/omnitutor/ omnitutor
