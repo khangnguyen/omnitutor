@@ -1,6 +1,9 @@
 package app
 
-import "github.com/revel/revel"
+import (
+  "github.com/revel/revel"
+  "omnitutor/app/controllers"
+)
 
 func init() {
 	// Filters is the default set of global filters.
@@ -19,10 +22,11 @@ func init() {
 		revel.ActionInvoker,           // Invoke the action.
 	}
 
-	// register startup functions with OnAppStart
-	// ( order dependent )
-	// revel.OnAppStart(InitDB)
-	// revel.OnAppStart(FillCache)
+        revel.OnAppStart(controllers.InitDB)
+        revel.InterceptMethod((*controllers.GormController).Begin, revel.BEFORE)
+        revel.InterceptMethod((*controllers.GormController).Commit, revel.AFTER)
+        revel.InterceptMethod((*controllers.GormController).Rollback, revel.FINALLY)
+
 }
 
 // TODO turn this into revel.HeaderFilter

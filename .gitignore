@@ -28,3 +28,4 @@ logs
 *~
 bower_components
 _build
+set_env.sh
