@@ -5,20 +5,20 @@
   <form class="form-signin">
     <div class="row">
       <div class="col-sm-4 col-sm-offset-4">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">{{msg . "account.register_greeting"}}</h2>
       </div>
     </div>
     <div class="row top-15">
       <div class="col-sm-4 col-sm-offset-4">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address *" required="" autofocus="">
-        <input type="username" id="inputUsername" class="form-control" placeholder="Username *" required="" autofocus="">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password *" required="">
-        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password *" required="">
+        <input type="email" id="inputEmail" class="form-control" placeholder='{{msg . "account.email_address"}} *' required="" autofocus="">
+        <input type="username" id="inputUsername" class="form-control" placeholder='{{msg . "account.username"}} *' required="">
+        <input type="password" id="inputPassword" class="form-control" placeholder='{{msg . "account.password"}} *' required="">
+        <input type="password" id="inputConfirmPassword" class="form-control" placeholder='{{msg . "account.confirm_password"}} *' required="">
       </div>
     </div>
     <div class="row top-15">
       <div class="col-sm-4 col-sm-offset-4">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{{msg . "account.register"}}</button>
       </div>
     </div>
   </form>

@@ -1,0 +1,6 @@
+account.register_greeting=Please register an account
+account.email_address=Email address
+account.username=Username
+account.password=Password
+account.confirm_password=Confirm Password
+account.register=Register
