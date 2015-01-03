@@ -47,7 +47,6 @@ Column                  Type         Notes
 ======================= ============ ====================================
 Column                  Type         Notes
 ======================= ============ ====================================
-``id``                  serial
 ``user_account_id``     int          References ``user_account(id)``
 ``service``             varchar      Third-party OAuth service used
 ``identity``            varchar      Identity in service

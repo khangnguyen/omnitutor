@@ -25,3 +25,7 @@ ln -s /var/www/hosts/dev.omnitutor.me/omnitutor/ omnitutor
 
 # Revel seems to go with boostrap by default
 sudo npm install -g grunt-cli
+
+# Database, migrations and ORM
+go get -u -v github.com/lib/pq
+go get bitbucket.org/liamstask/goose/cmd/goose
