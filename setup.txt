@@ -1,4 +1,4 @@
-B0;136;0c# Set up nginx virtual host
+# Set up nginx virtual host
 
 # Install virtual environment
 # Set up virtual environment
@@ -22,3 +22,6 @@ go get github.com/revel/cmd/revel
 cd $GOPATH
 cd src
 ln -s /var/www/hosts/dev.omnitutor.me/omnitutor/ omnitutor
+
+# Revel seems to go with boostrap by default
+sudo npm install -g grunt-cli

@@ -1,0 +1,27 @@
+{{set . "title" "Omnitutor - Registration"}}
+{{template "header.html" .}}
+
+<div class="container-fluid">
+  <form class="form-signin">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <h2 class="form-signin-heading">Please sign in</h2>
+      </div>
+    </div>
+    <div class="row top-15">
+      <div class="col-sm-4 col-sm-offset-4">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address *" required="" autofocus="">
+        <input type="username" id="inputUsername" class="form-control" placeholder="Username *" required="" autofocus="">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password *" required="">
+        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password *" required="">
+      </div>
+    </div>
+    <div class="row top-15">
+      <div class="col-sm-4 col-sm-offset-4">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{{template "footer.html" .}}

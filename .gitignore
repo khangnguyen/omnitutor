@@ -25,3 +25,5 @@ _testmain.go
 
 venv
 logs
+*~
+bower_components

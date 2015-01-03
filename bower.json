@@ -1,0 +1,27 @@
+{
+  "name": "dev.omnitutor.me",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gtoken/omnitutor",
+  "authors": [
+    "Khang Nguyen <nguyenkhang90@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
