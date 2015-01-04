@@ -2,6 +2,7 @@ package models
 
 import (
   "time"
+  "github.com/revel/revel"
 )
 
 type UserAccount struct {
@@ -10,6 +11,7 @@ type UserAccount struct {
   Email           string
   Username        string
   Password        string
+  PasswordConfirm string `sql:"-"`
   Gender          string
   AvatarFilename  string
   InviterId       int64
@@ -22,4 +24,17 @@ type UserAccount struct {
 
 func (u UserAccount) TableName() string {
   return "user_account"
+}
+
+func (user *UserAccount) Validate(v *revel.Validation) {
+  v.Required(user.Email).
+          Message("The field is required")
+  v.Email(user.Email).
+       Message("Email format is invalid")
+  v.Required(user.Username).
+          Message("The field is required")
+  v.Required(user.Password).
+          Message("The field is required")
+  v.Required(user.PasswordConfirm == user.Password).
+          Message("The passwords do not match")
 }
